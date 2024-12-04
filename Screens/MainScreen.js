@@ -20,7 +20,6 @@ const MainScreen = ({navigation}) => {
     const dog = spriteStates.dog;
     const bone = spriteStates.bone;
 
-    // Check if the two sprites are overlapping
     const collision =
       Math.abs(dog.x - bone.x) < 50 && Math.abs(dog.y - bone.y) < 50;
 
@@ -35,7 +34,7 @@ const MainScreen = ({navigation}) => {
   const swapActions = () => {
     setActions(prevActions => ({
       ...prevActions,
-      dog: prevActions.bone, // Swap actions
+      dog: prevActions.bone,
       bone: prevActions.dog,
     }));
   };

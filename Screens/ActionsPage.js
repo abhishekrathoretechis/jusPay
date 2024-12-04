@@ -140,13 +140,13 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f7f7f7', // Lighter background for better contrast
+    backgroundColor: '#f7f7f7',
   },
   heading: {
     fontSize: 22,
     fontWeight: 'bold',
     marginVertical: 15,
-    color: '#333', // Darker text for better readability
+    color: '#333',
   },
   spriteSelector: {
     flexDirection: 'row',
@@ -164,11 +164,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 2,
     borderColor: '#6200ea',
-    shadowColor: '#000', // Added shadow for a lifted effect
+    shadowColor: '#000',
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.1,
     shadowRadius: 6,
-    elevation: 3, // Android shadow
+    elevation: 3,
   },
   selectedSprite: {
     backgroundColor: '#6200ea',
