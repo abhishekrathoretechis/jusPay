@@ -107,17 +107,32 @@ const MainScreen = ({navigation}) => {
             <Text style={styles.coordinateText}>Y: {spriteStates.bone.y}</Text>
           </View>
         </View>
-        <TouchableOpacity
-          style={styles.actionButton}
-          onPress={() =>
-            navigation.navigate('ActionsPage', {
-              actions,
-              setActions,
-              sprites,
-            })
-          }>
-          <Text style={styles.buttonText}>Add Actions</Text>
-        </TouchableOpacity>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-evenly',
+          }}>
+          <TouchableOpacity
+            style={styles.actionButton}
+            onPress={() => {
+              playActionsForSprite('dog');
+              playActionsForSprite('bone');
+            }}>
+            <Text style={styles.buttonText}>Play Both</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.actionButton}
+            onPress={() =>
+              navigation.navigate('ActionsPage', {
+                actions,
+                setActions,
+                sprites,
+              })
+            }>
+            <Text style={styles.buttonText}>Add Actions</Text>
+          </TouchableOpacity>
+        </View>
       </View>
       <View style={styles.spriteContainer}>
         {sprites.includes('dog') && (
